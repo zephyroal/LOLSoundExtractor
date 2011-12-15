@@ -1,0 +1,14 @@
+﻿<!--<Window x:Class="WpfApplication1.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="300" Width="300">
+    <Grid>
+        
+    </Grid>
+</Window>-->
+
+<NavigationWindow x:Class="WpfApplication1.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Switch page with transition" Height="512" Icon="icon1.ico" Width="958" ShowsNavigationUI="False" Source="Index.xaml" Navigating="NavigationWindow_Navigating" ResizeMode="NoResize">
+</NavigationWindow>

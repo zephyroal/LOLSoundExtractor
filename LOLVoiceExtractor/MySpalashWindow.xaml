@@ -1,0 +1,12 @@
+﻿<Window x:Class="LOLVoiceExtractor.MySpalashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MySpalashWindow" Height="255" Width="479" WindowStartupLocation="CenterScreen" WindowStyle="None" ShowInTaskbar="False" SizeToContent="WidthAndHeight" AllowsTransparency="True" BorderThickness="0">
+        <Image Height="255" HorizontalAlignment="Left" Margin="0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="479" />
+    <Window.Foreground>
+        <SolidColorBrush />
+    </Window.Foreground>
+    <Window.Background>
+        <SolidColorBrush />
+    </Window.Background>
+</Window>
