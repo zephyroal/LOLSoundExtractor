@@ -63,8 +63,8 @@ namespace LOLVoiceExtractor
         private string[] strCommend ={
 		    "CallFSBDLL",
 		    "-d",
-		    "F:\\LOLSound\\Sound3",
-		    "F:\\LOLSound\\GameMusicEvents_bank00.fsb"
+		    "",
+		    ""
 	        };
         public MainWindow()
         {
@@ -192,6 +192,12 @@ namespace LOLVoiceExtractor
             {
                 strCommend[2] = this.textBox2.Text;
                 strCommend[3] = this.textBox1.Text;
+                if (strCommend[2] == ""||strCommend[3]== "")
+                {
+                    mMusicPlayer.PlayVoice(MusicPlayer.eVoice.VoiceClose);
+                    System.Windows.MessageBox.Show("抱歉，请先选择好文件及目录", "喔，ms这样不行的！", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                    return;    
+                }
                 this.richTextBox1.Document.Blocks.Clear();
 
                 this.label3.Visibility = System.Windows.Visibility.Visible;

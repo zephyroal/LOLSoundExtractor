@@ -22,7 +22,7 @@
                 <SolidColorBrush />
             </RichTextBox.Background>
         </RichTextBox>
-        <Label Content="建议：拷贝Fmod文件一份出来再提取" Height="39" HorizontalAlignment="Left" Margin="26,56,0,0" Name="label4" VerticalAlignment="Top" Width="371" Foreground="White" Grid.ColumnSpan="2" />
+        <Label Content="提示，目前只支持提取其中几个大的文件包，并建议拷贝Fmod文件一份出来再提取。" Height="28" HorizontalAlignment="Left" Margin="12,56,0,0" Name="label4" VerticalAlignment="Top" Width="455" Foreground="White" Grid.ColumnSpan="2" />
         <CheckBox Content="解压后是否提醒打开目录" Height="16" HorizontalAlignment="Left" Margin="21,295,0,0" Name="checkBox1" VerticalAlignment="Top" IsChecked="True" DataContext="{Binding}" Foreground="#FF4C5F38" />
         <Button Content="清空输出面板" Height="22" HorizontalAlignment="Left" Margin="12,236,0,0" Name="button4" VerticalAlignment="Top" Width="87" Click="button4_Click" Visibility="Hidden" />
         <Image Height="32" HorizontalAlignment="Left" Margin="288,218,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="32"  Opacity="0.8" MouseLeftButtonDown="image2_MouseLeftButtonDown" MouseEnter="image2_MouseEnter" MouseLeave="image2_MouseLeave" Grid.Column="1" />
