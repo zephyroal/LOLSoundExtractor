@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbeddedResources2", "EmbeddedResources2.csproj", "{96258F8F-BA9D-4B2E-99B6-3106547E5CB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{96258F8F-BA9D-4B2E-99B6-3106547E5CB8}.Debug.ActiveCfg = Debug|.NET
+		{96258F8F-BA9D-4B2E-99B6-3106547E5CB8}.Debug.Build.0 = Debug|.NET
+		{96258F8F-BA9D-4B2E-99B6-3106547E5CB8}.Release.ActiveCfg = Release|.NET
+		{96258F8F-BA9D-4B2E-99B6-3106547E5CB8}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

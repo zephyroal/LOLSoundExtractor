@@ -1,0 +1,4 @@
+^\bsprintf(\b.*\b;\b$
+sprintf(.*;$
+
+sprintf.*;g_sOutBuffer+=szBuffer;
