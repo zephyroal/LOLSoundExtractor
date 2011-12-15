@@ -95,7 +95,7 @@ namespace LOLVoiceExtractor
             m_sVoiceSource[(int)eVoice.VoiceEffort2] = "Lux.ultimateeffort1.mp3";
             m_sVoiceSource[(int)eVoice.VoiceBeginWork] = "Jester.joke.mp3";
             m_sVoiceSource[(int)eVoice.VoiceClose] = "Twitch.dying3_1.mp3";
-            m_sVoiceSource[(int)eVoice.VoiceOpen] = "sona_ariaofperserverance_melod_5.mp3";
+            m_sVoiceSource[(int)eVoice.VoiceOpen] = /*"night.mp3";*/"sona_ariaofperserverance_melod_5.mp3";
             m_sVoiceSource[(int)eVoice.VoiceBeginWork2] = "Jester.laugh3.mp3";
             
             for (int i = 0; i < (int)eVoice.VoiceNum; ++i)
