@@ -31,12 +31,12 @@ namespace LOLVoiceExtractor
     {
         [DllImport("FSBDll.dll", EntryPoint = "AbortFSBMoudle")]
         public static extern void AbortFSBMoudle();
-        [DllImport("FSBDll.dll", EntryPoint = "GetTotalNum")]
+        [DllImport("FSBDll.dll", EntryPoint = "GetTotalNum", CharSet = CharSet.Ansi)]
         public static extern int GetTotalNum();
         [DllImport("FSBDll.dll", EntryPoint = "GetNowNum")]
         public static extern int GetNowNum();
         [DllImport("FSBDll.dll", EntryPoint = "ExtractFDBFile")]
-        public static extern  int ExtractFDBFile(int argc, string[] argv);
+        public static extern int ExtractFDBFile(int argc, byte[] strFrom,byte[] strTo);
         [DllImport("FSBDll.dll", EntryPoint = "GetOutBuffer")]
         public static extern IntPtr GetOutBuffer();
         [DllImport("FSBDll.dll", EntryPoint = "SetBuffer")]
@@ -244,7 +244,19 @@ namespace LOLVoiceExtractor
 	    }
         private void ExtractFile()
         {
-            ExtractFDBFile(4, strCommend);
+            Encoding   e0   =   Encoding.GetEncoding(   936   );
+
+            char[] charOri = strCommend[3].ToCharArray();
+            byte[] byteFrom = e0.GetBytes(strCommend[3]);
+            byte[] byteTo     = e0.GetBytes(strCommend[2]);
+//             string strAfter = e0.GetString(byteFrom);
+//             char[] charAfter = strAfter.ToCharArray();
+            ExtractFDBFile(4, byteFrom,byteTo);
+          /*  strCommend[3] = strAfter;
+            //Encoding.Convert(Encoding.ASCII,Encoding.Unicode,)
+            for(int i=0;i<4;++i)
+                strCommend[i] = e0.GetString(e0.GetBytes(strCommend[i]));
+            ExtractFDBFile(4, strCommend);*/
             m_State = MyState.State_Over;
         }
         private void OpenWindow()

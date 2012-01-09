@@ -13,6 +13,6 @@
 FSBDLL_API  int GetTotalNum();
 FSBDLL_API int GetNowNum();
 FSBDLL_API void AbortFSBMoudle();
-FSBDLL_API int   ExtractFDBFile(int argc, char *argv[]);
+FSBDLL_API int   ExtractFDBFile(int argc, char strFrom[],char strTo[]);
 FSBDLL_API const char* GetOutBuffer();
 FSBDLL_API void SetBuffer(char *ViewBuffer);
