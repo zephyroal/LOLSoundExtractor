@@ -201,7 +201,7 @@ int     addhead     = 0,
         rebbuffsz   = 0;
 char      *rebbuff    = NULL;
 
-FSBDLL_API int  ExtractFDBFile(int argc, char *argv[]) 
+FSBDLL_API int  ExtractFDBFile(int argc, char strFrom[],char strTo[]) 
 {
 	g_iTotalNum=0;
 	g_iNowNum=0;
@@ -252,7 +252,8 @@ FSBDLL_API int  ExtractFDBFile(int argc, char *argv[])
         "web:    aluigi.org\n"
         "\n", stderr);
 */
-    if(argc < 2) {
+    if(argc < 2)
+	{
        sprintf(szBuffer,"\n"
             "Usage: %s [options] <file.FSB>\n"
             "\n"
@@ -277,12 +278,12 @@ FSBDLL_API int  ExtractFDBFile(int argc, char *argv[])
             "      tool adds a sequential number if a file with same name already exists\n"
             "      because filenames in FSB archives are truncated at 30 chars.\n"
             "TIPS: -a option is VERY useful so the extracted files are ready to be played!\n"
-            "\n", argv[0]);
+            "\n", "No");
         exit(1);
     }
 
     argc--;
-    for(i = 1; i < argc; i++) {
+    /*for(i = 1; i < argc; i++) {
         if(((argv[i][0] != '-') && (argv[i][0] != '/')) || (strlen(argv[i]) != 2)) {
             fprintf(stderr, "\nError: wrong command-line argument (%s)\n\n", argv[i]);
             exit(1);
@@ -302,21 +303,27 @@ FSBDLL_API int  ExtractFDBFile(int argc, char *argv[])
                 }
         }
     }
+	*/
+	folder=strTo;
+    fname =strFrom;
 
-    fname = argv[argc];
-
-    if(rebfile) {
-        if(addhead) {
+    if(rebfile) 
+	{
+        if(addhead)
+		{
            sprintf(szBuffer,"\n"
                 "Error: you can't use the -a and -s options together or you can't rebuild\n"
                 "       the FSB file correctly because the files MUST be all headerless\n"
                 "\n");
             exit(1);
         }
-       sprintf(szBuffer,"- reb file:     %s\n", rebfile);g_sOutBuffer+=szBuffer;
+       sprintf(szBuffer,"- reb file:     %s\n", rebfile);
+	   g_sOutBuffer+=szBuffer;
         fdreb = fopen(rebfile, "rb");
-        if(!rebuild) {
-            if(fdreb) {
+        if(!rebuild)
+		{
+            if(fdreb)
+			{
                 fclose(fdreb);
                sprintf(szBuffer,"\n"
                     "Error: you have selected -s but the output binary file already exists,\n"
@@ -325,27 +332,31 @@ FSBDLL_API int  ExtractFDBFile(int argc, char *argv[])
             }
             fdreb = fopen(rebfile, "wb");
         }
-        if(!fdreb) std_err();
+        if(!fdreb)
+			std_err();
     }
-
-    if(listfile) {
+    if(listfile) 
+	{
         fdlist = fopen(listfile, "wb");
         if(!fdlist) std_err();
     }
-
-    if(!rebuild) {
+    if(!rebuild) 
+	{
        sprintf(szBuffer,"输入的文件:   %s\n", fname);
 	   g_sOutBuffer+=szBuffer;
         fd = fopen(fname, "rb");
-        if(!fd) std_err();
-    } else {
-        if(!fdreb) {
+        if(!fd) 
+			std_err();
+    } 
+	else 
+	{
+        if(!fdreb) 
+		{
            sprintf(szBuffer,"\n"
                 "Error: you have selected the rebuild option but you have not specified the\n"
                 "       file with the rebuild informations using -s\n");
             exit(1);
         }
-
        sprintf(szBuffer,"- output file:  %s\n", fname);
 	   g_sOutBuffer+=szBuffer;
         fd = fopen(fname, "rb");
@@ -360,7 +371,8 @@ FSBDLL_API int  ExtractFDBFile(int argc, char *argv[])
         if(!fd) std_err();
     }
 
-    if(folder) {
+    if(folder) 
+	{
        sprintf(szBuffer,"输入的目录: %s\n", folder);
 	   g_sOutBuffer+=szBuffer;
         if(chdir(folder) < 0) 
