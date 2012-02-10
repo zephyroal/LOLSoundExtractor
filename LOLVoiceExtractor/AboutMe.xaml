@@ -16,7 +16,8 @@
         <Image Height="64" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="64" OpacityMask="{x:Null}"></Image>
         <Image Height="31" HorizontalAlignment="Left" Margin="187,208,0,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="31"  PreviewMouseLeftButtonUp="image3_PreviewMouseLeftButtonUp" PreviewMouseLeftButtonDown="image3_PreviewMouseLeftButtonDown" MouseEnter="image3_MouseEnter" MouseLeave="image3_MouseLeave" Grid.Column="1" />
         <Label Content="继续解压咯。。。" Height="28" Margin="72,0,0,12" Name="label1" VerticalAlignment="Bottom" Foreground="#FFFFF5F5" HorizontalAlignment="Left" Width="109" Grid.Column="1" />
-        <Label Content="多情溅客是也" Height="43" HorizontalAlignment="Left" Margin="82,12,0,0" Name="label2" VerticalAlignment="Top" Width="324" Foreground="White" FontSize="14" Background="#A5D7D7D7" Grid.ColumnSpan="2" />
+        <Label Content="如有问题欢迎联系：zephyroal@live.com" Height="26" HorizontalAlignment="Left" Margin="8,211,0,0" Name="label3" VerticalAlignment="Top" Width="237" Foreground="White" Grid.ColumnSpan="2" />
+        <TextBlock Height="81" HorizontalAlignment="Left" Margin="82,0,0,165" Name="textBlock1" Text="    该蹩脚软件作者为多情溅客，天天只知撸，算思忏悔，但仍不思上进改代码，还望莫怪~" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Foreground="White" Width="349" TextWrapping="WrapWithOverflow" Background="#60B4ADAD" FontWeight="Bold" />
     </Grid>
     <Window.Foreground>
         <SolidColorBrush />
